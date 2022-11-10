@@ -1,0 +1,38 @@
+.animation {
+ position: absolute;
+ display: inline-block;
+ left: 50%;
+ top: 30%;
+}
+
+.blueCircle {
+ transform: rotateZ(130deg) scale(1.3);
+}
+.greenCircle {
+ transform: rotateZ(40deg);
+ position: absolute;
+ left: -40%;
+ top: -30%;
+ z-index: 10;
+}
+
+@media (max-width: 1185px) {
+ .animation {
+  left: 40%;
+  transform: scale(0.8);
+ }
+}
+
+@media (max-width: 885px) {
+ .animation {
+  left: 50%;
+  transform: translateX(-50%) scale(0.5);
+ }
+}
+
+@media (max-width: 365px) {
+ .animation {
+  left: 50%;
+  transform: translateX(-50%) scale(0.3);
+ }
+}
