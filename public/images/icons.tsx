@@ -359,3 +359,16 @@ export const TelegramIcon = ({ margin = "0" }: { margin: string }) => (
   />
  </svg>
 );
+
+export const SnakeFoodIcon = () => (
+ <svg
+  width={22}
+  height={22}
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+ >
+  <circle opacity={0.1} cx={10.827} cy={10.964} r={10.346} fill="#43D9AD" />
+  <circle opacity={0.2} cx={10.827} cy={10.964} r={7.346} fill="#43D9AD" />
+  <circle cx={10.827} cy={10.964} r={4} fill="#43D9AD" />
+ </svg>
+);

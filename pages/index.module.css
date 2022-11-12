@@ -8,5 +8,16 @@
  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
  backdrop-filter: blur(80px);
  -webkit-backdrop-filter: blur(80px);
- z-index: 20;
+ z-index: 11;
+}
+
+.mainContent {
+ position: absolute;
+ z-index: 22;
+ border: red solid 1px;
+ height: calc(100vh - 114px);
+ width: 100vw;
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
 }

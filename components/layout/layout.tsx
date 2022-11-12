@@ -11,9 +11,10 @@ export const siteTitle = "Abdulkhak Tursunov's portfolio";
 type layoutProps = {
  title: string;
  children: JSX.Element[] | JSX.Element;
+ styles: {} | undefined
 };
 
-const Layout: React.FC<layoutProps> = ({ children, title }) => {
+const Layout: React.FC<layoutProps> = ({ children, title, styles }) => {
  return (
   <div className={classes.layout} >
    <Head>
@@ -31,7 +32,7 @@ const Layout: React.FC<layoutProps> = ({ children, title }) => {
     <meta name="twitter:card" content="summary_large_image" />
    </Head>
    <Header pagetitle={title} />
-   <main>{children}</main>
+   <main style={styles}>{children}</main>
    <Footer />
   </div>
  );
