@@ -42,6 +42,7 @@ export default function SnakeGameBoard({
     coords={[32, 300]}
     isGameStarted={isStarted}
    />
+   <SkipBtn/>
   </div>
  );
 }
@@ -110,3 +111,5 @@ const SnakeFoods = ({ foods }: { foods: number[] }) => (
   </div>
  </div>
 );
+
+const SkipBtn = () => <button className={classes.skipBtn} >skip</button>;

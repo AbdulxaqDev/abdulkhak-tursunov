@@ -14,10 +14,107 @@
 .mainContent {
  position: absolute;
  z-index: 22;
- /* border: red solid 1px; */
  height: calc(100vh - 114px);
  width: 100vw;
  display: flex;
- justify-content: space-around;
+ justify-content: center;
  align-items: center;
+ padding: 0 20px;
+}
+
+.mainText {
+ font-family: "Fira Code";
+ font-style: normal;
+ display: flex;
+ justify-content: center;
+ align-items: flex-start;
+ flex-direction: column;
+}
+
+.hi {
+ font-weight: 450;
+ font-size: 18px;
+ line-height: 24px;
+ color: #e5e9f0;
+ text-align: left;
+}
+.name {
+ font-weight: 400;
+ font-size: 62px;
+ line-height: 81px;
+
+ color: #e5e9f0;
+}
+.job {
+ margin-bottom: 82px;
+ font-weight: 450;
+ font-size: 32px;
+ line-height: 42px;
+
+ color: #4d5bce;
+}
+.comment {
+ margin-bottom: 10px;
+ font-weight: 450;
+ font-size: 16px;
+ line-height: 21px;
+
+ color: #607b96;
+}
+
+.comment2 {
+ margin-bottom: 10px;
+ font-weight: 450;
+ font-size: 16px;
+ line-height: 21px;
+
+ color: #607b96;
+}
+
+.script {
+ font-weight: 500;
+ font-size: 16px;
+ line-height: 21px;
+}
+
+.script .const {
+ color: #4d5bce;
+}
+.script .variableName {
+ color: #43d9ad;
+}
+
+.script a {
+ color: #e99287;
+}
+
+.script .link {
+ text-decoration-line: underline;
+}
+
+.break {
+ display: none;
+}
+
+@media (max-width: 535px) {
+ .break {
+  display: unset;
+ }
+}
+
+@media (max-width: 480px) {
+ .job {
+  font-weight: 450;
+  font-size: 20px;
+  line-height: 26px;
+  margin-bottom: 195px;
+
+  color: #43d9ad;
+ }
+}
+
+@media (max-width: 1150px) {
+ .comment {
+  display: none;
+ }
 }

@@ -15,9 +15,22 @@ export default function Home() {
    <Animation />
    <div className={classes.blur}></div>
    <div className={classes.mainContent}>
-    <h2>hedddddddddddddllo</h2>
-    
-    <SnakeGame/>
+    <div className={classes.mainText}>
+     <p className={classes.hi}>Hi all. I am</p>
+     <h3 className={classes.name}>Abdulkhak Tursunov</h3>
+     <h4 className={classes.job}>&gt; Front-end developer</h4>
+     <p className={classes.comment}>// complete the game to continue</p>
+     <p className={classes.comment2}>// find my profile on Github:</p>
+     <p className={classes.comment}>// you can also see it on my Github page</p>
+     <p className={classes.script}>
+      <span className={classes.const}>const</span>{" "}
+      <span className={classes.variableName}>githubLink</span> ={" "}
+      <a href="" target="_blank">
+       “<span className={classes.link}>https://<br className={classes.break} />github.com/AbdulxaqDev</span>”
+      </a>
+     </p>
+    </div>
+    <SnakeGame />
    </div>
   </Layout>
  );
