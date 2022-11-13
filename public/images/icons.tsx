@@ -51,7 +51,7 @@ export const ArrowBottomIcon = ({ margin = "0" }: { margin: string }) => (
   width="9"
   height="7"
   viewBox="0 0 9 7"
-  fill="none"
+  fill="white"
   xmlns="http://www.w3.org/2000/svg"
   style={{ margin: margin }}
  >
@@ -360,8 +360,24 @@ export const TelegramIcon = ({ margin = "0" }: { margin: string }) => (
  </svg>
 );
 
-export const SnakeFoodIcon = () => (
+export const SnakeFoodIcon = ({
+ isInGame = false,
+ margin,
+}: {
+ isInGame: boolean;
+ margin: string;
+}) => (
  <svg
+  style={
+   isInGame
+    ? {
+       position: "absolute",
+       top: "50%",
+       left: "50%",
+       transform: "translate(-50%, -50%)",
+      }
+    : { margin: margin }
+  }
   width={22}
   height={22}
   fill="none"
@@ -370,5 +386,21 @@ export const SnakeFoodIcon = () => (
   <circle opacity={0.1} cx={10.827} cy={10.964} r={10.346} fill="#43D9AD" />
   <circle opacity={0.2} cx={10.827} cy={10.964} r={7.346} fill="#43D9AD" />
   <circle cx={10.827} cy={10.964} r={4} fill="#43D9AD" />
+ </svg>
+);
+
+export const SnakeFoodInactiveIcon = ({ margin }: { margin: string }) => (
+ <svg
+  width={22}
+  height={22}
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  style={{ margin: margin }}
+ >
+  <g opacity={0.3} fill="#43D9AD">
+   <circle opacity={0.1} cx={10.615} cy={11.038} r={10.346} />
+   <circle opacity={0.2} cx={10.615} cy={11.038} r={7.346} />
+   <circle cx={10.615} cy={11.038} r={4} />
+  </g>
  </svg>
 );

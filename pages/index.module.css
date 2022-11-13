@@ -14,7 +14,7 @@
 .mainContent {
  position: absolute;
  z-index: 22;
- border: red solid 1px;
+ /* border: red solid 1px; */
  height: calc(100vh - 114px);
  width: 100vw;
  display: flex;
