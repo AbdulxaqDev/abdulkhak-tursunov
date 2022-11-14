@@ -1,0 +1,19 @@
+.aboutmeSideNav{
+ border-right: 1px solid #1e2d3d;
+ height: calc(100vh - 114px);
+ width: 100%;
+ max-width: 68px;
+
+ display: flex;
+ justify-content: flex-start;
+ align-items: center;
+ flex-direction: column;
+}
+
+.aboutmeSideNav a:first-child{
+ margin-top: 17px;
+}
+
+.aboutmeSideNav a{
+ margin-bottom: 33px;
+}

@@ -1,0 +1,29 @@
+.main {
+ font-family: "Fira Code";
+ font-style: normal;
+ user-select: none;
+}
+
+.main h3 {
+ cursor: pointer;
+ display: flex;
+ justify-content: flex-start;
+ align-items: center;
+
+ font-weight: 400;
+ font-size: 16px;
+ line-height: 21px;
+
+ color: #ffffff;
+}
+
+.main ul li{
+ cursor: pointer;
+ display: flex;
+ justify-content: flex-start;
+ align-items: center;
+}
+
+.main ul{
+ /* transition: .4s ease-in-out; */
+}

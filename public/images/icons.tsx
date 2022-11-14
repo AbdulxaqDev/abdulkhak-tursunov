@@ -94,7 +94,7 @@ export const MIcon = ({ margin = "0" }: { margin: string }) => (
  </svg>
 );
 
-export const FolderBlueIcon = ({
+export const FolderIcon = ({
  fill = "#fff",
  margin = "0",
 }: {

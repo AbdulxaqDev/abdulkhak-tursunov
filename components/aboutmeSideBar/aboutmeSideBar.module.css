@@ -1,0 +1,6 @@
+.aboutmeSideBar{
+ width: 100%;
+ max-width: 243px;
+ border: yellow 1px solid;
+ height: calc(100vh - 114px);
+}
