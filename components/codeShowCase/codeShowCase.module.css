@@ -1,0 +1,64 @@
+.codeShowCase {
+ font-family: "Fira Code";
+ font-style: normal;
+ width: calc(100% - 80px);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ border-bottom: 1px solid #1e2d3d;
+ padding-bottom: 18px;
+ margin: 0 auto 50px;
+}
+
+.info {
+ display: flex;
+ justify-content: flex-start;
+ width: 100%;
+ margin-bottom: 12px;
+}
+
+.codeShowCase .info .myImage {
+ border-radius: 50%;
+ margin-right: 10px;
+}
+
+.codeShowCase .info h3 {
+ font-weight: 700;
+ font-size: 14px;
+ line-height: 18px;
+
+ color: #5565e8;
+}
+
+.codeShowCase .info p {
+ font-weight: 450;
+ font-size: 12px;
+ line-height: 16px;
+ /* identical to box height */
+
+ color: #607b96;
+}
+
+.code {
+ box-sizing: border-box;
+ padding: 24px;
+
+ width: 100%;
+ max-width: 100%;
+ height: auto;
+
+ background: #011221;
+ border: 1px solid #1e2d3d;
+ border-radius: 15px;
+
+
+font-weight: 600;
+font-size: 20px;
+line-height: 170%;
+word-spacing: 2px;
+}
+
+
+
+

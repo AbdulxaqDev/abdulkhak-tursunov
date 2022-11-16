@@ -17,11 +17,23 @@
  color: #ffffff;
 }
 
+.main h3 span{
+ margin: -1px 0;
+ padding: 0;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
 .main ul li{
  cursor: pointer;
  display: flex;
  justify-content: flex-start;
  align-items: center;
+}
+
+.main ul:last-child li:last-child{
+margin-bottom: 30px;
 }
 
 .main ul{

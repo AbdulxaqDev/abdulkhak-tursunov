@@ -25,7 +25,7 @@ export default function Home() {
      <p className={classes.script}>
       <span className={classes.const}>const</span>{" "}
       <span className={classes.variableName}>githubLink</span> ={" "}
-      <a href="" target="_blank">
+      <a href="https://github.com/AbdulxaqDev" target="_blank">
        “<span className={classes.link}>https://<br className={classes.break} />github.com/AbdulxaqDev</span>”
       </a>
      </p>

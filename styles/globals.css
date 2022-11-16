@@ -20,3 +20,20 @@ a {
  padding: 0;
 }
 
+
+/* width */
+::-webkit-scrollbar {
+ width: 26px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+ background: #f1f1f100; 
+ border-left: 1px solid #1e2d3d;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+ background: #607B96; 
+}
+

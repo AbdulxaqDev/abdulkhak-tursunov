@@ -1,0 +1,79 @@
+.aboutmeInfo {
+ position: relative;
+ border-right: 1px solid #1e2d3d;
+ height: calc(100vh - 114px);
+ width: 100%;
+ max-width: 700px;
+}
+
+.manifester {
+ border-bottom: 1px solid #1e2d3d;
+ width: 100%;
+ max-width: 700px;
+ height: 41px;
+}
+
+.identifier {
+ display: inline-flex;
+ padding: 0 15px;
+ justify-content: space-around;
+ align-items: center;
+
+ height: 41px;
+ border-right: 1px solid #1e2d3d;
+}
+
+.identifier {
+ font-family: "Fira Code";
+ font-style: normal;
+ font-weight: 400;
+ font-size: 16px;
+ line-height: 21px;
+
+ color: #607b96;
+ user-select: none;
+}
+
+.aboutmeTextArea {
+ resize: none;
+ outline: none;
+ width: 100%;
+ max-width: 700px;
+ height: calc(100vh - 157px);
+ background-color: #1e2d3d00;
+ border: none;
+
+ padding: 17px 5px 0 100px;
+
+ font-family: "Fira Code";
+ font-style: normal;
+ font-weight: 450;
+ font-size: 18px;
+ line-height: 150%;
+ /* or 27px */
+
+ color: #607b96;
+}
+
+.rowNums {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ position: absolute;
+ top: 59px;
+ left: 38px;
+
+ font-family: "Fira Code";
+ font-style: normal;
+ font-weight: 450;
+ font-size: 18px;
+ line-height: 150%;
+ /* or 27px */
+
+ text-align: right;
+
+ color: #607b96;
+}
+.num {
+}

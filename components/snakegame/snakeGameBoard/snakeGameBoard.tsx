@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Link from "next/link";
 import {
  ArrowBottomIcon,
  ArrowLeftIcon,
@@ -42,7 +43,7 @@ export default function SnakeGameBoard({
     coords={[32, 300]}
     isGameStarted={isStarted}
    />
-   <SkipBtn/>
+   <SkipBtn />
   </div>
  );
 }
@@ -112,4 +113,8 @@ const SnakeFoods = ({ foods }: { foods: number[] }) => (
  </div>
 );
 
-const SkipBtn = () => <button className={classes.skipBtn} >skip</button>;
+const SkipBtn = () => (
+ <button className={classes.skipBtn}>
+  <Link href="/aboutme/aboutme">skip</Link>
+ </button>
+);
