@@ -17,3 +17,9 @@
 .aboutmeSideNav a{
  margin-bottom: 33px;
 }
+
+@media(max-width: 1550px){
+ .aboutmeSideNav{
+  display: none;
+ }
+}

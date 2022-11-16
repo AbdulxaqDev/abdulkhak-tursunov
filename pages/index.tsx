@@ -18,7 +18,7 @@ export default function Home() {
     <div className={classes.mainText}>
      <p className={classes.hi}>Hi all. I am</p>
      <h3 className={classes.name}>Abdulkhak Tursunov</h3>
-     <h4 className={classes.job}>&gt; Front-end developer</h4>
+     <h4 className={classes.job}>&gt; Front-end and mobile developer</h4>
      <p className={classes.comment}>// complete the game to continue</p>
      <p className={classes.comment2}>// find my profile on Github:</p>
      <p className={classes.comment}>// you can also see it on my Github page</p>

@@ -38,3 +38,34 @@
  overflow-y: scroll;
  padding-top: 50px;
 }
+
+
+.slash{
+ display: none;
+}
+
+
+@media (max-width: 1000px) {
+
+ .aboutmeShowcase{
+  margin-top: 20px;
+  border: none;
+  height: auto;
+ }
+
+ .manifester{
+  border: none;
+ }
+ .identifier{
+  border: none;
+  color: white;
+ }
+
+ .identifier svg{
+  display: none;
+ }
+
+ .slash{
+  display: unset;
+ }
+}

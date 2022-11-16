@@ -5,7 +5,8 @@
  display: flex;
  justify-content: space-between;
  border: 1px solid #1e2d3d;
- z-index: 20;
+ z-index: 200;
+ background: #011627;
 }
 
 .footer ul {
@@ -30,10 +31,9 @@
  border-left: #1e2d3d solid 1px;
 }
 
-.githubUsername{
+.githubUsername {
  margin-right: 7px;
 }
-
 
 @media (max-width: 597px) {
  .footer ul a {
@@ -42,7 +42,7 @@
 }
 
 @media (max-width: 469px) {
- .githubUsername{
+ .githubUsername {
   display: none;
  }
  .footer ul a:nth-child(2) {

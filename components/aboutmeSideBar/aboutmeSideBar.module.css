@@ -1,6 +1,23 @@
-.aboutmeSideBar{
+.aboutmeSideBar {
  width: 100%;
  max-width: 243px;
  height: calc(100vh - 114px);
  border-right: 1px solid #1e2d3d;
+}
+
+@media (max-width: 1250px) {
+ .aboutmeSideBar {
+  max-width: 190px;
+ }
+}
+
+@media (max-width: 1000px) {
+ .aboutmeSideBar {
+  max-width: 100%;
+  margin-bottom: 25px;
+ }
+
+ .aboutmeSideBar h3:nth-child(1) {
+  background-color: #1e2d3d;
+ }
 }

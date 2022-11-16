@@ -19,7 +19,7 @@ export default function AboutmeInfo({
   <div className={classes.aboutmeInfo}>
    <div className={classes.manifester}>
     <div className={classes.identifier}>
-     <p>{infoLabel}</p>
+     <p><span className={classes.slash}>// </span>{infoLabel}</p>
      <XIcon margin="0 0 0 15px" />
     </div>
    </div>

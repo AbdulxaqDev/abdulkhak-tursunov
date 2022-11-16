@@ -135,7 +135,7 @@ export default function AboutmeShowcase() {
   <div className={classes.aboutmeShowcase}>
    <div className={classes.manifester}>
     <div className={classes.identifier}>
-     <p>code snippet showcase:</p>
+     <p> <span className={classes.slash}>// </span> code snippet showcase:</p>
      <XIcon margin="0 0 0 15px" />
     </div>
    </div>

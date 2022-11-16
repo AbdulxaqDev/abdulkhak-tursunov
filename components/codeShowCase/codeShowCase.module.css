@@ -52,13 +52,65 @@
  border: 1px solid #1e2d3d;
  border-radius: 15px;
 
-
-font-weight: 600;
-font-size: 20px;
-line-height: 170%;
-word-spacing: 2px;
+ font-weight: 600;
+ font-size: 20px;
+ line-height: 170%;
+ word-spacing: 2px;
 }
 
+@media (max-width: 1870px) {
+ .code {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 170%;
+  word-spacing: 2px;
+  max-width: 700px;
+ }
+}
 
+@media (max-width: 1650px) {
+ .code {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 170%;
+  word-spacing: 2px;
+  max-width: 500px;
+ }
+}
 
+@media (max-width: 1350px) {
+ .code {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 170%;
+  word-spacing: 2px;
+  max-width: 450px;
+ }
+}
 
+@media (max-width: 1220px) {
+ .code {
+  max-width: 600px;
+ }
+}
+
+@media (max-width: 1150px) {
+ .code {
+  max-width: 500px;
+ }
+}
+
+@media (max-width: 1100px) {
+ .code {
+  max-width: 400px;
+ }
+}
+
+@media (max-width: 1000px) {
+ .codeShowCase {
+  width: calc(100% - 20px);
+ }
+ .code {
+  max-width: 100%;
+ }
+}

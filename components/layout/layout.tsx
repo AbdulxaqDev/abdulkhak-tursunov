@@ -32,7 +32,10 @@ const Layout: React.FC<layoutProps> = ({ children, title, styles }) => {
     <meta name="twitter:card" content="summary_large_image" />
    </Head>
    <Header pagetitle={title} />
-   <main style={styles}>{children}</main>
+   <main style={styles}>
+    <h1 className={classes.title} >_{title}</h1>
+    {children}
+   </main>
    <Footer />
   </div>
  );
