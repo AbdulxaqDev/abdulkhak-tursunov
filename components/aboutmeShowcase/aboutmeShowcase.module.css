@@ -37,35 +37,53 @@
  max-height: calc(100vh - 159px);
  overflow-y: scroll;
  padding-top: 50px;
+ justify-content: space-between;
 }
 
-
-.slash{
+.slash {
  display: none;
 }
 
+.projects {
+ padding: 150px 170px 0;
+ display: flex;
+ flex-wrap: wrap;
+}
 
 @media (max-width: 1000px) {
-
- .aboutmeShowcase{
+ .aboutmeShowcase {
   margin-top: 20px;
   border: none;
   height: auto;
  }
 
- .manifester{
+ .manifester {
   border: none;
  }
- .identifier{
+ .identifier {
   border: none;
   color: white;
  }
 
- .identifier svg{
+ .identifier svg {
   display: none;
  }
 
- .slash{
+ .slash {
   display: unset;
+ }
+
+ .showcaseWrapper {
+  justify-content: center;
+ }
+}
+
+@media (max-width: 1420px) {
+ .showcaseWrapper {
+  justify-content: space-around;
+ }
+
+ .projects {
+  padding: 150px 20px 100px;
  }
 }

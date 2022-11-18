@@ -3,8 +3,19 @@ import React, { useState } from "react";
 import classes from "./dropDown.module.css";
 
 type Icon = JSX.Element[] | JSX.Element | undefined;
-type title = { name: string; icon: Icon };
+type IconTitle = (isChecked: boolean) => JSX.Element[] | JSX.Element;
+type title = {
+ name: string;
+ Icon: Icon;
+};
 type titles = title[] | undefined;
+
+type titleProjects = {
+ name: string;
+ Icon: IconTitle;
+};
+type titlesProjects = titleProjects[] | undefined;
+
 type label = { name: string; iconMain: Icon; iconSecondary: Icon };
 type height = string | number;
 
@@ -13,13 +24,17 @@ export default function DropDown({
  titles,
  label,
  styles,
- setInfoLabel,
+ setInfoLabel = () => {},
+ isProjects = false,
+ titlesProjects,
 }: {
  label: label;
- titles: titles;
- children: any | undefined;
- styles: {};
- setInfoLabel: any;
+ titles?: titles;
+ children?: any | undefined;
+ styles?: {};
+ setInfoLabel?: any;
+ isProjects?: boolean;
+ titlesProjects?: titlesProjects;
 }) {
  const [dropHeight, setDropHeight] = useState<height>(0);
  const [rotate, setRotate] = useState(0);
@@ -48,24 +63,62 @@ export default function DropDown({
     {label.name}
    </h3>
    <ul style={{ maxHeight: dropHeight, overflow: "hidden" }}>
-    {titles &&
-     titles.map((title, i) => (
-      <li
-       onClick={() => {
-        if (title.name === "click to copy") {
-         navigator.clipboard.writeText("abdulkhak8tursunov@gmail.com");
-        }
-        if (title.name !== "click to copy" && title.name !== "+998993933028") {
-         setInfoLabel("personal-info / education / " + title.name);
-        }
-       }}
-       key={i}
-       className={classes.title}
-      >
-       {title.icon}
-       {title.name}
-      </li>
-     ))}
+    {titles
+     ? titles.map((title, i) => {
+        return (
+         <li
+          onClick={() => {
+           if (title.name === "click to copy") {
+            navigator.clipboard.writeText("abdulkhak8tursunov@gmail.com");
+           }
+           if (
+            title.name !== "click to copy" &&
+            title.name !== "+998993933028"
+           ) {
+            setInfoLabel("personal-info / education / " + title.name);
+           }
+          }}
+          key={i}
+          className={classes.title}
+         >
+          {title.Icon}
+          {title.name}
+         </li>
+        );
+       })
+     : titlesProjects &&
+       titlesProjects.map((title, i) => {
+        const [isChecked, setIsCecked] = useState(false);
+        const { Icon, name } = title;
+        return (
+         <li
+          onClick={() => {
+           if (title.name === "click to copy") {
+            navigator.clipboard.writeText("abdulkhak8tursunov@gmail.com");
+           }
+           if (
+            title.name !== "click to copy" &&
+            title.name !== "+998993933028"
+           ) {
+            setInfoLabel("personal-info / education / " + title.name);
+           }
+           setIsCecked((pre) => !pre);
+          }}
+          key={i}
+          className={classes.title}
+         >
+          {isProjects ? (
+           <>
+            <input type="checkbox" checked={isChecked} />
+            {Icon && Icon(isChecked)}
+           </>
+          ) : (
+           <>{Icon}</>
+          )}
+          {name}
+         </li>
+        );
+       })}
     {children}
    </ul>
   </div>

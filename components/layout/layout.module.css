@@ -11,6 +11,7 @@
  color: #ffffff;
  border-left: 1px solid #1e2d3d;
  display: none;
+ border: none;
 }
 
 @media (max-width: 1000px) {

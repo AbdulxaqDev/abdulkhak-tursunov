@@ -1,0 +1,170 @@
+.projectCard {
+ position: relative;
+ width: 100%;
+ height: 314px;
+ max-width: 370px;
+ background: #011221;
+ border: 1px solid #1e2d3d;
+ border-radius: 15px;
+ /* overflow: hidden; */
+ font-family: "Fira Code";
+ font-style: normal;
+ display: flex;
+ justify-content: flex-end;
+ align-items: center;
+ flex-direction: column;
+ margin: 0 20px 70px;
+}
+
+.title {
+ position: absolute;
+ top: -35px;
+ left: 0px;
+}
+
+.title p {
+ display: inline;
+}
+
+.title p:first-child {
+ font-weight: 700;
+ font-size: 16px;
+ line-height: 21px;
+ color: #5565e8;
+}
+
+.title p:last-child {
+ font-weight: 450;
+ font-size: 16px;
+ line-height: 21px;
+ color: #607b96;
+}
+
+.icon {
+ position: absolute;
+ right: 22px;
+ top: 22px;
+}
+
+.projectImg {
+ position: absolute;
+ left: 0;
+ top: 0;
+ border-radius: 15px;
+ z-index: 1;
+ width: 100%;
+}
+
+.description {
+ padding: 24px 34px 34px;
+ font-weight: 450;
+ font-size: 18px;
+ line-height: 150%;
+ color: #607b96;
+ width: 100%;
+ height: 60%;
+ border-radius: 0 0 15px 15px;
+ z-index: 2;
+ background-color: #011221;
+ text-align: justify;
+}
+
+.btns {
+ position: absolute;
+ top: 10px;
+ left: 10px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-direction: column;
+}
+
+.btns button {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-family: "Fira Code";
+ font-style: normal;
+ color: #fff;
+ border: none;
+ width: 40px;
+ height: 30px;
+ gap: 10px;
+
+ background: #fea55f;
+ border-radius: 8px;
+}
+
+.btns button:hover{
+ border: 1px solid #01162710;
+}
+
+.btns button:first-child{
+ margin-bottom: 10px;
+}
+
+@media (max-width: 1420px) {
+ .projectCard {
+  max-width: 600px;
+  height: 400px;
+ }
+ .description {
+  height: 30%;
+ }
+
+ .projectImg {
+  height: 100%;
+ }
+}
+
+@media (max-width: 700px) {
+ .projectCard {
+  max-width: 500px;
+  height: 400px;
+ }
+ .description {
+  height: 50%;
+ }
+
+ .projectImg {
+  height: 80%;
+ }
+}
+
+@media (max-width: 590px) {
+ .projectCard {
+  max-width: 500px;
+  height: 300px;
+ }
+ .description {
+  height: 60%;
+ }
+
+ .projectImg {
+  height: 60%;
+ }
+}
+
+@media (max-width: 400px) {
+ .projectCard {
+  max-width: 500px;
+  height: 300px;
+ }
+ .description {
+  height: 70%;
+  font-size: 15px;
+ }
+
+ .projectImg {
+  height: 50%;
+ }
+}
+
+@media (max-width: 390px) {
+ .projectCard {
+  margin-bottom: 90px;
+ }
+ .title {
+  top: -55px;
+ }
+}

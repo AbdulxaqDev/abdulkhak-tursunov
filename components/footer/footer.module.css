@@ -39,6 +39,10 @@
  .footer ul a {
   padding: 0;
  }
+
+ .footer ul a:nth-child(2) {
+  padding: 0 13px;
+ }
 }
 
 @media (max-width: 469px) {
