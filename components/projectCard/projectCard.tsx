@@ -19,8 +19,8 @@ export default function ProjectCard({
  imageUrl: any;
  description: string;
  icon: JSX.Element;
- sourseUrl: string;
- demoUrl?: string;
+ sourseUrl: string | undefined;
+ demoUrl?: string | undefined;
 }) {
  return (
   <div className={classes.projectCard}>
@@ -37,20 +37,23 @@ export default function ProjectCard({
    />
    <div className={classes.description}>
     <p>{description}</p>
-    <div className={classes.btns}>
+   </div>
+   <div className={classes.btns}>
+    {sourseUrl && (
      <button>
       <Link href={sourseUrl} target="_blank">
        <CodeBrackets margin="0px 0 0" check={true} />
       </Link>
      </button>
-     {demoUrl && (
-      <button>
-       <Link href={demoUrl} target="_blank">
-       <GithubIcon/>
-       </Link>
-      </button>
-     )}
-    </div>
+    )}
+
+    {demoUrl && (
+     <button>
+      <Link href={demoUrl} target="_blank">
+       Live
+      </Link>
+     </button>
+    )}
    </div>
   </div>
  );

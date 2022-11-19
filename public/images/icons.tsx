@@ -752,7 +752,7 @@ export const CodeBrackets = ({
   height={25}
   viewBox="0 -64 640 640"
   xmlns="http://www.w3.org/2000/svg"
-  style={{ margin: margin, transform: "scale(1)" }}
+  style={{ margin: margin }}
  >
   <path
    fill={check ? "#607B96" : "#273e53"}

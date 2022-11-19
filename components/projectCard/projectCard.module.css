@@ -1,7 +1,6 @@
 .projectCard {
  position: relative;
  width: 100%;
- height: 314px;
  max-width: 370px;
  background: #011221;
  border: 1px solid #1e2d3d;
@@ -9,7 +8,7 @@
  /* overflow: hidden; */
  font-family: "Fira Code";
  font-style: normal;
- display: flex;
+ display: flex-start;
  justify-content: flex-end;
  align-items: center;
  flex-direction: column;
@@ -44,29 +43,32 @@
  position: absolute;
  right: 22px;
  top: 22px;
+ background-color: #fff;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ border-radius: 7px;
 }
 
 .projectImg {
- position: absolute;
- left: 0;
- top: 0;
- border-radius: 15px;
+ border-radius: 15px 15px 0 0;
  z-index: 1;
  width: 100%;
 }
 
 .description {
- padding: 24px 34px 34px;
  font-weight: 450;
  font-size: 18px;
  line-height: 150%;
  color: #607b96;
  width: 100%;
- height: 60%;
  border-radius: 0 0 15px 15px;
- z-index: 2;
  background-color: #011221;
  text-align: justify;
+}
+
+.description p{
+ padding: 24px 34px 24px;
 }
 
 .btns {
@@ -91,8 +93,13 @@
  height: 30px;
  gap: 10px;
 
- background: #fea55f;
+ background: #011627;
  border-radius: 8px;
+}
+
+.btns button a{
+ color: #84a4c4;
+ font-weight: 900;
 }
 
 .btns button:hover{
@@ -105,65 +112,51 @@
 
 @media (max-width: 1420px) {
  .projectCard {
+  margin-bottom: 70px;
   max-width: 600px;
-  height: 400px;
  }
  .description {
   height: 30%;
  }
 
  .projectImg {
-  height: 100%;
+  height: 70%;
  }
 }
 
 @media (max-width: 700px) {
  .projectCard {
   max-width: 500px;
-  height: 400px;
  }
- .description {
-  height: 50%;
- }
-
  .projectImg {
-  height: 80%;
+  height: 60%;
  }
 }
 
 @media (max-width: 590px) {
  .projectCard {
   max-width: 500px;
-  height: 300px;
- }
- .description {
-  height: 60%;
  }
 
  .projectImg {
-  height: 60%;
+  height: 40%;
  }
 }
 
 @media (max-width: 400px) {
  .projectCard {
   max-width: 500px;
-  height: 300px;
  }
  .description {
-  height: 70%;
   font-size: 15px;
  }
 
  .projectImg {
-  height: 50%;
+  height: 30%;
  }
 }
 
 @media (max-width: 390px) {
- .projectCard {
-  margin-bottom: 90px;
- }
  .title {
   top: -55px;
  }
