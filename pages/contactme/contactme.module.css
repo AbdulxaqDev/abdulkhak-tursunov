@@ -1,0 +1,8 @@
+.contactme{
+ height: calc(100vh - 114px);
+ display: flex;
+ justify-content: flex-start;
+ align-items: center;
+ border-left: 1px solid #1e2d3d;
+ border-right: 1px solid #1e2d3d;
+}

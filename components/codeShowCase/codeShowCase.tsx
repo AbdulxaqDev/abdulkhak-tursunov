@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { marked } from "marked";
@@ -12,7 +12,15 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
 import classes from "./codeShowCase.module.css";
 
-export default function CodeShowCase({ showcase }: { showcase: string }) {
+export default function CodeShowCase({
+ showcase,
+ isFormShowCase = false,
+ style,
+}: {
+ showcase: string;
+ isFormShowCase?: boolean;
+ style?: {};
+}) {
  const myLoader = () => {
   return `https://avatars.githubusercontent.com/u/102298716?s=400&u=fb52639e9026b49e65f38f3bcb5fe8fdebb90f35&v=4`;
  };
@@ -29,29 +37,33 @@ export default function CodeShowCase({ showcase }: { showcase: string }) {
   const el = codeRef.current as any;
   el!.children[0].children[0].style.background = "#111b2700";
   el!.children[0].children[0].style.scroll = "hidden";
+  el!.children[0].children[0].style.scroll = "hidden";
+  el!.children[0].children[0].style.wordBreak = "break-all";
  }, []);
 
  return (
   <div className={classes.codeShowCase}>
-   <div className={classes.info}>
-    <Image
-     loader={myLoader}
-     src="me.png"
-     alt="Abdulkhak Tursunov"
-     width={36}
-     height={36}
-     className={classes.myImage}
-    />
-    <div>
-     <h3>
-      <Link href="https://github.com/AbdulxaqDev" target="_blank">
-       @AbdulxaqDev
-      </Link>
-     </h3>
-     <p>Created at 14-11-2022</p>
+   {!isFormShowCase && (
+    <div className={classes.info}>
+     <Image
+      loader={myLoader}
+      src="me.png"
+      alt="Abdulkhak Tursunov"
+      width={36}
+      height={36}
+      className={classes.myImage}
+     />
+     <div>
+      <h3>
+       <Link href="https://github.com/AbdulxaqDev" target="_blank">
+        @AbdulxaqDev
+       </Link>
+      </h3>
+      <p>Created at 14-11-2022</p>
+     </div>
     </div>
-   </div>
-   <div className={classes.code} ref={codeRef}>
+   )}
+   <div style={style} className={classes.code} ref={codeRef}>
     <Markdown
      components={{
       code({ node, inline, className, children, ...props }) {

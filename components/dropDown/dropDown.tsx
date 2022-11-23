@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 import classes from "./dropDown.module.css";
@@ -7,6 +8,7 @@ type IconTitle = (isChecked: boolean) => JSX.Element[] | JSX.Element;
 type title = {
  name: string;
  Icon: Icon;
+ socialLink?: string;
 };
 type titles = title[] | undefined;
 
@@ -30,6 +32,7 @@ export default function DropDown({
  areProjects = false,
  removeTechTitle,
  addTechTitle,
+ areSocials = false,
 }: {
  label: label;
  titles?: titles;
@@ -41,6 +44,7 @@ export default function DropDown({
  areProjects?: boolean;
  removeTechTitle?: (tech: string) => void;
  addTechTitle?: (tech: string) => void;
+ areSocials?: boolean;
 }) {
  const [dropHeight, setDropHeight] = useState<height>(0);
  const [rotate, setRotate] = useState(0);
@@ -88,8 +92,19 @@ export default function DropDown({
           key={i}
           className={classes.title}
          >
-          {title.Icon}
-          {title.name}
+          {areSocials ? (
+           title.socialLink && (
+            <Link href={title.socialLink} target="_blank">
+             {title.Icon}
+             {title.name}
+            </Link>
+           )
+          ) : (
+           <>
+            {title.Icon}
+            {title.name}
+           </>
+          )}
          </li>
         );
        })

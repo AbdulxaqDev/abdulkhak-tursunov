@@ -17,12 +17,14 @@ export default function AboutmeShowcase({
  return (
   <div className={classes.aboutmeShowcase}>
    <div className={classes.manifester}>
-    <div className={classes.identifier}>
-     <p>
-      <span className={classes.slash}>// </span> {title}
-     </p>
-     <XIcon margin="0 0 0 15px" />
-    </div>
+    {title && (
+     <div className={classes.identifier}>
+      <p>
+       <span className={classes.slash}>// </span> {title}
+      </p>
+      <XIcon margin="0 0 0 15px" />
+     </div>
+    )}
    </div>
    <div
     style={style}

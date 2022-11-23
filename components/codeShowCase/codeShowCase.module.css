@@ -6,7 +6,6 @@
  justify-content: center;
  align-items: center;
  flex-direction: column;
- border-bottom: 1px solid #1e2d3d;
  padding-bottom: 18px;
  margin: 0 auto 50px;
 }
@@ -41,9 +40,7 @@
 }
 
 .code {
- box-sizing: border-box;
  padding: 24px;
-
  width: 100%;
  max-width: 100%;
  height: auto;
@@ -56,6 +53,11 @@
  font-size: 20px;
  line-height: 170%;
  word-spacing: 2px;
+}
+
+code.language-typescript {
+ border: red solid 1px;
+ overflow: hidden;
 }
 
 @media (max-width: 1870px) {

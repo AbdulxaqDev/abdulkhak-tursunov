@@ -120,10 +120,10 @@ const projectsTitles = [
 
 const projectsData = [
  {
+  number: 1,
   title: "nextjs-react",
   imageUrl: portfolio,
-  description:
-   "This is my portfolio site as you can see.",
+  description: "This is my portfolio site as you can see.",
   icon: (
    <>
     <NextIcon check={true} />
@@ -136,6 +136,7 @@ const projectsData = [
   tech: ["React", "Nextjs", "HTML", "CSS", "all"],
  },
  {
+  number: 2,
   title: "vue-website",
   imageUrl: grossProfit,
   description:
@@ -151,6 +152,7 @@ const projectsData = [
   tech: ["Vue", "HTML", "CSS", "all"],
  },
  {
+  number: 3,
   title: "react-native-app",
   imageUrl: simSimApp,
   description:
@@ -161,6 +163,7 @@ const projectsData = [
   tech: ["React Native", "all"],
  },
  {
+  number: 4,
   title: "react-native-app",
   imageUrl: pomidoroMobile,
   description:
@@ -171,6 +174,7 @@ const projectsData = [
   tech: ["React Native", "all"],
  },
  {
+  number: 5,
   title: "react-calculator",
   imageUrl: reactCalculator,
   description:
@@ -189,6 +193,7 @@ const projectsData = [
   tech: ["React", "HTML", "CSS", "all"],
  },
  {
+  number: 6,
   title: "react-pomidoro-clock",
   imageUrl: pomidoroSite,
   description:
@@ -205,6 +210,7 @@ const projectsData = [
   tech: ["React", "HTML", "CSS", "all"],
  },
  {
+  number: 7,
   title: "react-drum-machine",
   imageUrl: drumMachine,
   description:
@@ -221,6 +227,7 @@ const projectsData = [
   tech: ["React", "HTML", "CSS", "all"],
  },
  {
+  number: 8,
   title: "react-random-quotes",
   imageUrl: randomQuote,
   description:
@@ -239,6 +246,7 @@ const projectsData = [
   tech: ["React", "HTML", "CSS", "all"],
  },
  {
+  number: 9,
   title: "react-markdown",
   imageUrl: markdown,
   description:
@@ -257,6 +265,7 @@ const projectsData = [
   tech: ["React", "HTML", "CSS", "all"],
  },
  {
+  number: 10,
   title: "nodejs-react-fullstack",
   imageUrl: adminPanel,
   description:
@@ -275,6 +284,7 @@ const projectsData = [
   tech: ["Nodejs", "React", "HTML", "CSS", "MongoDB", "all"],
  },
  {
+  number: 11,
   title: "nodejs-react-fullstack",
   imageUrl: gmail,
   description:
@@ -293,6 +303,7 @@ const projectsData = [
   tech: ["Nodejs", "React", "HTML", "CSS", "MongoDB", "all"],
  },
  {
+  number: 12,
   title: "nodejs-react-fullstack",
   imageUrl: fakeDataGenerator,
   description:
@@ -358,7 +369,7 @@ export default function Projects() {
       .map((project, i) => (
        <ProjectCard
         key={i}
-        number={i + 1}
+        number={project.number}
         title={project.title}
         imageUrl={project.imageUrl}
         description={project.description}
