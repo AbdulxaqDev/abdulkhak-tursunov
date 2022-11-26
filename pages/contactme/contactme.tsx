@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Layout from "../../components/layout/layout";
 import AboutmeSideBar from "../../components/aboutmeSideBar/aboutmeSideBar";
 import DropDown from "../../components/dropDown/dropDown";
@@ -58,20 +58,9 @@ const findMeTitles = [
 ];
 
 export default function Contactme() {
- const formText = `
- const button = document.querySelector('#sendBtn');
-
- const message = {
-  name: "Jonathan Davis",
-  email: "jonathan-davis@gmail.com",
-  message: "Hey! Just checked your website and it looks awesome! Also, I checked your articled on Medium. Lerned a few nice tips. Thanks!",
-  date: "Thu 21 Apr"
- }
-
- button.addEventListener('click', () => {
-  form.send(message);
- })
- `;
+ const [name, setName] = useState("");
+ const [email, setEmail] = useState("");
+ const [message, setMessage] = useState("");
 
  return (
   <Layout styles={undefined} title="contactme">
@@ -90,10 +79,10 @@ export default function Contactme() {
      ></DropDown>
     </AboutmeSideBar>
     <AboutmeInfo setAboutmeText={() => {}} infoLabel={"contacts"}>
-     <Form />
+     <Form setName={setName} setEmail={setEmail} setMessage={setMessage} />
     </AboutmeInfo>
     <AboutmeShowcase title="">
-     <FormShowCase />
+     <FormShowCase name={name} email={email} message={message} />
     </AboutmeShowcase>
    </div>
   </Layout>

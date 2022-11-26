@@ -29,3 +29,10 @@
 
  color: #607b96;
 }
+
+
+@media (max-width: 390px) {
+ .thankyou {
+  min-width: 300px;
+ }
+}

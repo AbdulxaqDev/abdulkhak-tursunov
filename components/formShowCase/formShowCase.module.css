@@ -4,7 +4,7 @@
  display: flex;
  justify-content: center;
  align-items: center;
- border: 1px solid red;
+ flex-direction: column;
  height: 100%;
  min-height: 380px;
  max-width: 560px;
@@ -13,12 +13,14 @@
  font-weight: 450;
  font-size: 18px;
  line-height: 150%;
+ padding-left: 70px;
 }
 
 .code {
  text-align: left;
  height: 100%;
  width: 100%;
+ font-size: 15px;
 }
 
 .pink {
@@ -36,4 +38,10 @@
 
 .orange {
  color: #fea55f;
+}
+
+@media(max-width: 1050px){
+ .formShowCase{
+  display: none;
+ }
 }

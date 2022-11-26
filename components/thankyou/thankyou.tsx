@@ -8,7 +8,7 @@ export default function Thankyou({ setIsSent }: {setIsSent: (vlaue: boolean) => 
    <h3>Thank you! 👨‍💻</h3>
    <p>Your message has been accepted. You will recieve answer really soon!</p>
    <h4>
-    <button onClick={() => setIsSent(false)}>submit-message</button>
+    <button onClick={() => setIsSent(false)}>send-new-message</button>
    </h4>
   </div>
  );

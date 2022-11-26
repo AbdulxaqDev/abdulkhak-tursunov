@@ -3,7 +3,17 @@ import Thankyou from "../thankyou/thankyou";
 
 import classes from "./form.module.css";
 
-export default function Form() {
+type input = (text: string) => void;
+
+export default function Form({
+ setName,
+ setEmail,
+ setMessage,
+}: {
+ setName: input;
+ setEmail: input;
+ setMessage: input;
+}) {
  const [isSent, setIsSent] = useState(false);
 
  return (
@@ -13,13 +23,13 @@ export default function Form() {
    ) : (
     <>
      <h1>_name:</h1>
-     <input type="text" />
+     <input type="text" onChange={(e) => setName(e.target.value)} />
      <h1>_email:</h1>
-     <input type="text" />
+     <input type="text" onChange={(e) => setEmail(e.target.value)} />
      <h1>_message:</h1>
-     <textarea />
+     <textarea onChange={(e) => setMessage(e.target.value)} />
      <h1>
-      <button onClick={() => setIsSent(true)} >submit-message</button>
+      <button onClick={() => setIsSent(true)}>submit-message</button>
      </h1>
     </>
    )}

@@ -34,6 +34,7 @@ export default function ProjectCard({
     className={classes.projectImg}
     width={370}
     height={200}
+    unoptimized={true}
    />
    <div className={classes.description}>
     <p>{description}</p>
