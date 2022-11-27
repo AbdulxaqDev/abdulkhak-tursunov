@@ -19,7 +19,7 @@ export default function AboutmeInfo({
    <div className={classes.manifester}>
     <div className={classes.identifier}>
      <p>
-      <span className={classes.slash}>// </span>
+      <span className={classes.slash}>&#47;&#47; </span>
       {infoLabel}
      </p>
      <XIcon margin="0 0 0 15px" />
@@ -29,7 +29,7 @@ export default function AboutmeInfo({
     children
    ) : (
     <>
-     <pre className={classes.aboutmeTextArea}>/*{abotmeText}*/</pre>
+     <pre className={classes.aboutmeTextArea}>&#47;*{abotmeText}*&#47;</pre>
      <div className={classes.rowNums}>
       {new Array(rowNums).fill(0).map((num, i) => (
        <span className={classes.num} key={i}>

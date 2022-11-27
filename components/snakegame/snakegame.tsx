@@ -216,6 +216,7 @@ export default function SnakeGame() {
   checkIfEat();
 
   return () => clearInterval(interval);
+  // eslint-disable-next-line no-use-before-define
  }, [snakeDots, snakeDots.food, isStarted, gameCondition]);
 
  return (

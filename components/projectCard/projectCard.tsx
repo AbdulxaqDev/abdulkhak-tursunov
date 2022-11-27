@@ -25,7 +25,7 @@ export default function ProjectCard({
  return (
   <div className={classes.projectCard}>
    <div className={classes.title}>
-    <p>Project {number}</p> <p> // _{title}</p>
+    <p>Project {number}</p> <p> &#47;&#47; _{title}</p>
    </div>
    <span className={classes.icon}>{icon}</span>
    <Image

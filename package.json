@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@types/highlight.js": "^10.1.0",
     "@types/marked": "^4.0.7",
     "@types/node": "18.11.9",
     "@types/react": "18.0.24",

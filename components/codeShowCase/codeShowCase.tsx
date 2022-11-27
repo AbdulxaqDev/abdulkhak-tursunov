@@ -74,6 +74,7 @@ export default function CodeShowCase({
          style={coldarkDark}
          PreTag="div"
          language={match[1]}
+         // eslint-disable-next-line no-use-before-define
          children={String(children).replace(/\n$/, "")}
          {...props}
         />

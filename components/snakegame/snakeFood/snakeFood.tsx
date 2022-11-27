@@ -11,6 +11,7 @@ export default function SnakeFood({ dot }: { dot: number[] }) {
    left: `${dot[0]}%`,
    top: `${dot[1]}%`,
   }));
+  // eslint-disable-next-line no-use-before-define
  }, [dot[0], dot[1]]);
 
  return (

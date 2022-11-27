@@ -20,7 +20,7 @@ export default function AboutmeShowcase({
     {title && (
      <div className={classes.identifier}>
       <p>
-       <span className={classes.slash}>// </span> {title}
+       <span className={classes.slash}>&#47;&#47; </span> {title}
       </p>
       <XIcon margin="0 0 0 15px" />
      </div>

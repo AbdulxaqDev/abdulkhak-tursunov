@@ -109,8 +109,8 @@ export default function DropDown({
         );
        })
      : titlesProjects &&
-       titlesProjects.map((title, i) => {
-        const [isChecked, setIsCecked] = useState(false);
+     titlesProjects.map((title, i) => {
+        const [isChecked, setIsCecked] = useState(false); // eslint-disable-line no-use-before-define
         const { Icon, name } = title;
         return (
          <li key={i} className={classes.title}>

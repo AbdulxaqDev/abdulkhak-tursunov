@@ -1,5 +1,4 @@
 import React from "react";
-import { classicNameResolver } from "typescript";
 
 import classes from "./formShowCase.module.css";
 
@@ -44,7 +43,7 @@ export default function FormShowCase({
      querySelector
     </span>
     <span className={classes.grey}>(</span>
-    <span className={classes.orange}>'#sendBtn'</span>
+    <span className={classes.orange}>&apos;#sendBtn&apos;</span>
     <span className={classes.grey}>);</span>
    </p>
 
@@ -60,28 +59,28 @@ export default function FormShowCase({
     <span style={{ marginLeft: 10 }} className={classes.blue}>
      name:
     </span>
-    <span className={classes.orange}>"{name}"</span>
+    <span className={classes.orange}>&quot;{name}&quot;</span>
     <span className={classes.grey}>,</span>
    </p>
    <p className={classes.code}>
     <span style={{ marginLeft: 10 }} className={classes.blue}>
      email:
     </span>
-    <span className={classes.orange}>"{email}"</span>
+    <span className={classes.orange}>&quot;{email}&quot;</span>
     <span className={classes.grey}>,</span>
    </p>
    <p className={classes.code}>
     <span style={{ marginLeft: 10 }} className={classes.blue}>
      message:
     </span>
-    <span className={classes.orange}>"{message}"</span>
+    <span className={classes.orange}>&quot;{message}&quot;</span>
     <span className={classes.grey}>,</span>
    </p>
    <p className={classes.code}>
     <span style={{ marginLeft: 10 }} className={classes.blue}>
      date:
     </span>
-    <span className={classes.orange}>"{date}"</span>
+    <span className={classes.orange}>&quot;{date}&quot;</span>
     <span className={classes.grey}>,</span>
    </p>
    <p className={classes.code}>
@@ -95,7 +94,7 @@ export default function FormShowCase({
      addEventListener
     </span>
     <span className={classes.grey}>(</span>
-    <span className={classes.orange}>'click'</span>
+    <span className={classes.orange}>&apos;click&apos;</span>
     <span className={classes.grey}>,</span>
     <span className={classes.grey}>(</span>
     <span className={classes.grey}>)</span>

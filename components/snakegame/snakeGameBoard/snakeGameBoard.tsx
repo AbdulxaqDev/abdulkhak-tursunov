@@ -66,8 +66,8 @@ const ScrewBtnX = () => (
 const GameDes = () => (
  <div className={classes.gameDes}>
   <div>
-   <p>// use keyboard</p>
-   <p>// arrows to play</p>
+   <p>&#47;&#47; use keyboard</p>
+   <p>&#47;&#47; arrows to play</p>
   </div>
   <div>
    <div
@@ -97,7 +97,7 @@ const GameDes = () => (
 const SnakeFoods = ({ foods }: { foods: number[] }) => (
  <div className={classes.snakeFoods}>
   <div>
-   <p>// food left</p>
+   <p>&#47;&#47; food left</p>
   </div>
   <div className={classes.foods}>
    <div>

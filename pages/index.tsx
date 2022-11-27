@@ -19,13 +19,13 @@ export default function Home() {
      <p className={classes.hi}>Hi all. I am</p>
      <h3 className={classes.name}>Abdulkhak Tursunov</h3>
      <h4 className={classes.job}>&gt; Front-end and mobile developer</h4>
-     <p className={classes.comment}>// complete the game to continue</p>
-     <p className={classes.comment2}>// find my profile on Github:</p>
-     <p className={classes.comment}>// you can also see it on my Github page</p>
+     <p className={classes.comment}>&#47;&#47; complete the game to continue</p>
+     <p className={classes.comment2}>&#47;&#47; find my profile on Github:</p>
+     <p className={classes.comment}>&#47;&#47; you can also see it on my Github page</p>
      <p className={classes.script}>
-      <span className={classes.const}>const</span>{" "}
-      <span className={classes.variableName}>githubLink</span> ={" "}
-      <a href="https://github.com/AbdulxaqDev" target="_blank">
+      <span className={classes.const}>const</span>
+      <span className={classes.variableName}>githubLink</span> =
+      <a href="https://github.com/AbdulxaqDev" target="_blank"  rel="noreferrer">
        “<span className={classes.link}>https://<br className={classes.break} />github.com/AbdulxaqDev</span>”
       </a>
      </p>
