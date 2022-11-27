@@ -9,13 +9,17 @@ export default function Form({
  setName,
  setEmail,
  setMessage,
+ isSent,
+ setIsSent,
+ sendMessage,
 }: {
  setName: input;
  setEmail: input;
  setMessage: input;
+ isSent: boolean;
+ setIsSent: (arg: boolean) => void;
+ sendMessage: () => void;
 }) {
- const [isSent, setIsSent] = useState(false);
-
  return (
   <div className={classes.form}>
    {isSent ? (
@@ -29,7 +33,13 @@ export default function Form({
      <h1>_message:</h1>
      <textarea onChange={(e) => setMessage(e.target.value)} />
      <h1>
-      <button onClick={() => setIsSent(true)}>submit-message</button>
+      <button
+       onClick={() => {
+        sendMessage();
+       }}
+      >
+       submit-message
+      </button>
      </h1>
     </>
    )}

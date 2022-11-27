@@ -21,22 +21,63 @@ const styles = {
  height: undefined,
 };
 
-const aboutText = `/*
+const info = [
+`About me
+   I have 2 years of experience as a front end developer. 
+   Mainly focused javascript frameworks. 
+   These are:
+  Vue, React, React Native,  Redux, RTK, Nodejs, Nextjs, Electron Js MongoDB(NoSQL), Mongoose, Tailwind, MaterialUI. 
+   I use Python too mostly for algorithms on leetcode, but did a project with a python framework, called Tkinter. 
+   I integrated the Tkinter desktop app with AutoCAD to automate the drawing.
+`,
+`Bio
+  I am 25 and from Uzbekistan. But, I live in Istanbul.
+  I can speak:
+   English(upper-intermediate)
+   Turkish(intermediate)
+   Russian(pre-intermediate)
+   ---
+   single
+`,
+`Interests
+  I like doing sport and being healthy.
+  I like phythical training, mostly doing push ups, push ups on bars and pull ups.
+  I do also e-sport, gaming. I like to play CS:GO.
+  I like also reading books, which are related to mostly ethical hacking and programming.
+`,
+`High-school
+  I studied Technical Architecture and Building Engineering at Civil engineering and Econmics college, between 2014 and 2017.
+`,
+`University
+  I studied  Geodesy, Cartography and Cadaster at Fergana politechnic institute, between 2018 and 2022.
+`,
+];
+
+const aboutText = `
   About me
-  I have 5 years of еxperience in web
-  development lorem ipsum dolor sit amet, 
-  consectetur adipiscing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore
-  magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris
-  nisi ut aliquip ex ea commodo consequat.
-  Duis aute irure dolor in reprehenderit in
- 
-  Duis aute irure dolor in reprehenderit in
-  voluptate velit esse cillum dolore eu fugiat 
-  nulla pariatur. Excepteur sint occaecat 
-  officia deserunt mollit anim id est laborum.
-*/`;
+  I have 2 years of experience as a front end developer. Mainly focused javascript frameworks. These are Vue, React, React Native,  Redux, RTK, Nodejs, Nextjs, Electron Js MongoDB(NoSQL), Mongoose, Tailwind, MaterialUI. I use Python mostly for algorithms on leetcode, but did a project with a python framework, called Tkinter. I integrated the Tkinter app with AutoCAD to automate the drawing.
+`;
+
+const bioText = `
+  I am 25 and from Uzbekistan. But, I live in Istanbul.
+  I can speak English(upper-intermediate), Turkish(intermediate) and Russian(pre-intermediate)
+  (--single--)
+`;
+
+const interestsText = `
+  I like doing sport and being healthy.
+  I like phythical training, mostly doing push ups, push ups on bars and pull ups.
+  I do also e-sport, gaming. I like to play CS:GO.
+  I like reading books, which are related to mostly ethical hacking and programming too.
+`;
+
+const eduHighSchoolText = `
+  I studied Technical Architecture and Building Engineering at Civil engineering and Econmics college, between 2014 and 2017.
+`;
+
+const eduUniversityText = `
+I studied  Geodesy, Cartography and Cadaster at Fergana politechnic institute, between 2018 and 2022.
+`;
 
 let labelPersonal = {
  name: "personal-info",
@@ -217,8 +258,29 @@ const showcases = [
 ];
 
 export default function Aboutme() {
- const [abotmeText, setAboutmeText] = useState(aboutText);
+ const [abotmeText, setAboutmeText] = useState(0);
  const [infoLabel, setInfoLabel] = useState("personal-info");
+
+ const changeInfoText = (text: string) => {
+  if (text === "personal-info") {
+   setAboutmeText(0);
+  }
+  if (text === "personal-info / bio") {
+   setAboutmeText(1);
+  }
+  if (text === "personal-info / interests") {
+   setAboutmeText(2);
+  }
+  if (text === "personal-info / education / high-school") {
+   setAboutmeText(3);
+  }
+  if (text === "personal-info / education / university") {
+   setAboutmeText(4);
+  }
+  console.log(text);
+
+  setInfoLabel(text);
+ };
 
  return (
   <Layout title="aboutme" styles={styles}>
@@ -228,14 +290,14 @@ export default function Aboutme() {
      <DropDown
       label={labelPersonal}
       styles={{ borderBottom: "1px solid #1e2d3d", height: 40 }}
-      setInfoLabel={setInfoLabel}
+      setInfoLabel={changeInfoText}
      >
-      <DropDown label={labelBio} setInfoLabel={setInfoLabel}></DropDown>
-      <DropDown label={labelInterests} setInfoLabel={setInfoLabel}></DropDown>
+      <DropDown label={labelBio} setInfoLabel={changeInfoText}></DropDown>
+      <DropDown label={labelInterests} setInfoLabel={changeInfoText}></DropDown>
       <DropDown
        label={labelEducation}
        titles={educationTitles}
-       setInfoLabel={setInfoLabel}
+       setInfoLabel={changeInfoText}
       ></DropDown>
      </DropDown>
 
@@ -251,11 +313,7 @@ export default function Aboutme() {
       {}
      </DropDown>
     </AboutmeSideBar>
-    <AboutmeInfo
-     abotmeText={abotmeText}
-     setAboutmeText={setAboutmeText}
-     infoLabel={infoLabel}
-    />
+    <AboutmeInfo abotmeText={info[abotmeText]} infoLabel={infoLabel} />
     <AboutmeShowcase>
      {showcases.map((code, i) => (
       <CodeShowCase key={i} showcase={code} />

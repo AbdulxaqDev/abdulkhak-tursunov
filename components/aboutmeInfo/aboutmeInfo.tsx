@@ -5,17 +5,14 @@ import classes from "./aboutmeInfo.module.css";
 
 export default function AboutmeInfo({
  abotmeText,
- setAboutmeText,
  infoLabel,
  children,
 }: {
  abotmeText?: string;
- setAboutmeText: (text: string) => void;
  infoLabel: string;
  children?: any;
 }) {
  const [rowNums, setRowNums] = useState(16);
- const [edit, setEdit] = useState(false);
 
  return (
   <div className={classes.aboutmeInfo}>
@@ -32,22 +29,7 @@ export default function AboutmeInfo({
     children
    ) : (
     <>
-     <textarea
-      readOnly={edit}
-      maxLength={550}
-      onInput={(e) => {
-       const target = e.target as HTMLInputElement;
-       setRowNums(target.value.match(/\n/g)!.length + 1);
-       if (rowNums > 21) {
-        setEdit(true);
-       }
-      }}
-      value={abotmeText}
-      className={classes.aboutmeTextArea}
-      onChange={(e) => {
-       if (!edit) setAboutmeText(e.target.value);
-      }}
-     ></textarea>
+     <pre className={classes.aboutmeTextArea}>/*{abotmeText}*/</pre>
      <div className={classes.rowNums}>
       {new Array(rowNums).fill(0).map((num, i) => (
        <span className={classes.num} key={i}>

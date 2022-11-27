@@ -42,6 +42,12 @@
  height: calc(100vh - 157px);
  background-color: #1e2d3d00;
  border: none;
+ word-wrap: break-word;
+ white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;
 
  padding: 17px 5px 0 100px;
 

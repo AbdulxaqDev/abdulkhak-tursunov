@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../../components/layout/layout";
 import AboutmeSideBar from "../../components/aboutmeSideBar/aboutmeSideBar";
 import DropDown from "../../components/dropDown/dropDown";
@@ -14,7 +14,6 @@ import {
 } from "../../public/images/icons";
 
 import classes from "./contactme.module.css";
-import CodeShowCase from "../../components/codeShowCase/codeShowCase";
 
 const contactLabel = {
  name: "contacts",
@@ -56,11 +55,35 @@ const findMeTitles = [
   socialLink: "https://www.facebook.com/abdulxaq.tursunov",
  },
 ];
-
+type input = (text: string) => void;
 export default function Contactme() {
+ const [isSent, setIsSent] = useState(false);
  const [name, setName] = useState("");
  const [email, setEmail] = useState("");
  const [message, setMessage] = useState("");
+
+ const sendMessage = () => {
+  if (
+   name === "" ||
+   email === "" ||
+   !email.includes(".") ||
+   !email.includes("@") ||
+   message === ""
+  ) {
+   alert("Please fill the all fields properly.");
+  } else {
+   console.log({ message: { name: name, email: email, message: message } });
+   setIsSent(true);
+  }
+ };
+
+ useEffect(() => {
+  if (!isSent) {
+   setName("");
+   setEmail("");
+   setMessage("");
+  }
+ }, [isSent]);
 
  return (
   <Layout styles={undefined} title="contactme">
@@ -78,8 +101,15 @@ export default function Contactme() {
       titles={findMeTitles}
      ></DropDown>
     </AboutmeSideBar>
-    <AboutmeInfo setAboutmeText={() => {}} infoLabel={"contacts"}>
-     <Form setName={setName} setEmail={setEmail} setMessage={setMessage} />
+    <AboutmeInfo infoLabel={"contacts"}>
+     <Form
+      sendMessage={sendMessage}
+      isSent={isSent}
+      setIsSent={setIsSent}
+      setName={setName}
+      setEmail={setEmail}
+      setMessage={setMessage}
+     />
     </AboutmeInfo>
     <AboutmeShowcase title="">
      <FormShowCase name={name} email={email} message={message} />
