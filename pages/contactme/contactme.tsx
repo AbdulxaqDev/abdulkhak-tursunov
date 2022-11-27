@@ -61,6 +61,8 @@ export default function Contactme() {
  const [name, setName] = useState("");
  const [email, setEmail] = useState("");
  const [message, setMessage] = useState("");
+ const t = "5878609714:AAGqmkhNaUD4i4QA1u9lfwFiirrkW0weZCA";
+ const chat_id = -1001543778916;
 
  const sendMessage = () => {
   if (
@@ -73,6 +75,11 @@ export default function Contactme() {
    alert("Please fill the all fields properly.");
   } else {
    console.log({ message: { name: name, email: email, message: message } });
+   const myMessage = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}%0ADate: ${new Date()}`;
+   const url = `https://api.telegram.org/bot${t}/sendMessage?chat_id=${chat_id}&text=${myMessage}`;
+   const api = new XMLHttpRequest();
+   api.open("GET", url, true);
+   api.send();
    setIsSent(true);
   }
  };
