@@ -61,8 +61,6 @@ export default function Contactme() {
  const [name, setName] = useState("");
  const [email, setEmail] = useState("");
  const [message, setMessage] = useState("");
- const t = process.env.BOT_TOKEN;
- const chat_id = process.env.CHAT_ID;
 
  const sendMessage = () => {
   if (
@@ -76,7 +74,7 @@ export default function Contactme() {
   } else {
    console.log({ message: { name: name, email: email, message: message } });
    const myMessage = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}%0ADate: ${new Date()}`;
-   const url = `https://api.telegram.org/bot${t}/sendMessage?chat_id=${chat_id}&text=${myMessage}`;
+   const url = `https://api.telegram.org/bot${process.env.BOT_TOKEN}/sendMessage?chat_id=${process.env.CHAT_ID}&text=${myMessage}`;
    const api = new XMLHttpRequest();
    api.open("GET", url, true);
    api.send();
