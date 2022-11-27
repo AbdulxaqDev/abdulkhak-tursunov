@@ -61,8 +61,8 @@ export default function Contactme() {
  const [name, setName] = useState("");
  const [email, setEmail] = useState("");
  const [message, setMessage] = useState("");
- const t = "5878609714:AAGqmkhNaUD4i4QA1u9lfwFiirrkW0weZCA";
- const chat_id = -1001543778916;
+ const t = process.env.BOT_TOKEN;
+ const chat_id = process.env.CHAT_ID;
 
  const sendMessage = () => {
   if (
